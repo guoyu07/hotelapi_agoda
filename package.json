@@ -1,0 +1,16 @@
+{
+  "name": "hotelapi_agoda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "csvToJson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvjson": "^4.0.2",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

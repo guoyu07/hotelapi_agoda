@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html ng-app="hotelApp" ng-controller="AppCtrl">
+
+<head>
+    <title>Hotel App</title>
+</head>
+
+<body>
+    <h1>Hotel Information</h1>
+
+    <form ng-submit="submit()">
+        City:
+        <input type="text" ng-model="hotelCity" placeholder="Please insert Hotel City" /> 
+        Sorting By Price:
+        <select ng-model="sortSelect">
+             <option value="ASC">ASC</option>
+             <option value="DESC">DESC</option>
+        </select>
+        <input type="submit" id="submit" value="Search" />
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>City</th>
+                <th>Hotel ID</th>
+                <th>Room</th>
+                <th>Price</th>
+            </tr>
+            <tbody>
+                <tr ng-repeat="hotel in hotelsInfo">
+                    <td>{{ hotel.CITY }}</td>
+                    <td>{{ hotel.HOTELID }}</td>
+                    <td>{{ hotel.ROOM }}</td>
+                    <td>{{ hotel.PRICE }}</td>
+                </tr>
+            </tbody>
+        </thead>
+    </table>
+
+</body>
+
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="/controllers/controller.js"></script>
